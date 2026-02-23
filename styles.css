@@ -1,0 +1,138 @@
+﻿:root {
+  --bg: #f2f4f7;
+  --panel: #ececec;
+  --ink: #12263a;
+  --muted: #2e4358;
+  --accent: #1f5f85;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.page {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 14px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #0f2035;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.controls {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mode-btn {
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  background: #ffffff;
+  color: #1f5f85;
+  cursor: pointer;
+}
+
+.mode-btn.active {
+  background: #1f5f85;
+  color: #ffffff;
+}
+
+.viz-wrap {
+  margin-top: 14px;
+  background: var(--panel);
+  border: 1px solid #bfc4be;
+  border-radius: 2px;
+  padding: 10px;
+  position: relative;
+  overflow: auto;
+}
+
+#matrixSvg {
+  width: 100%;
+  min-width: 1020px;
+  height: 900px;
+  display: block;
+}
+
+.axis text {
+  fill: #101010;
+  font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  stroke: #101010;
+  stroke-width: 1;
+}
+
+.cell rect {
+  stroke: rgba(250, 250, 250, 0.75);
+  stroke-width: 1;
+}
+
+.spark-max,
+.spark-min {
+  fill: none;
+  stroke-width: 1.8;
+  pointer-events: none;
+}
+
+.spark-max {
+  stroke: #27cf78;
+}
+
+.spark-min {
+  stroke: #7bd7ff;
+}
+
+.legend-title {
+  font-weight: 600;
+  fill: #101010;
+  font-size: 12px;
+}
+
+.legend-label {
+  fill: #101010;
+  font-size: 11px;
+}
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 20;
+  max-width: 290px;
+  padding: 7px 10px;
+  border-radius: 3px;
+  border: 1px solid #b9bdb5;
+  background: #f7f7f7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  #matrixSvg {
+    min-width: 920px;
+    height: 860px;
+  }
+}
