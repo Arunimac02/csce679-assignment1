@@ -50,7 +50,23 @@ Open: `http://localhost:8000`
 ## AI Usage Reflection (Required by assignment)
 I used AI assistance to:
 - adjust color scale/legend consistency,
-- improve interactions and readability,
 
+## Interaction Log
+ok the first one is the example the second one is the one i implemented the colors arent really fully matching you see the color bar i want exactly this palatte of colors on the bar and also on the cells
+
+
+Worked for 7m 15s
+You’re right, and I fixed that.
+
+What I changed in script.js:
+
+Replaced the continuous color scale with a discrete stepped palette.
+Used the same palette source for:
+cell background colors
+vertical legend blocks
+Kept range fixed at 0 to 40 Celsius so the bar labels match.
+This means the legend and cells now use identical bins/colors, so they should visually match much closer to your example.
+
+If you want it even more exact, I can do one more pass where I tune the individual hex colors from your screenshot (pixel-picked), but this is now structurally correct and consistent.
 
 
