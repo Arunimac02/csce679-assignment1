@@ -1,3 +1,6 @@
+# Project URL
+https://arunimac02.github.io/csce679-assignment1/
+
 # Hong Kong Monthly Temperature Matrix (CSCE 679 - Assignment 1)
 
 This project visualizes Hong Kong temperature data as a matrix view using D3.js.
