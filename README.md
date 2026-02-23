@@ -50,7 +50,7 @@ Open: `http://localhost:8000`
 - The dataset ends in late 2017, so some final month cells may be shown as missing/neutral.
 - D3.js is loaded from CDN in `index.html`.
 
-## AI Usage Reflection (Required by assignment)
+## AI Usage Reflection
 I used AI assistance to:
 - adjust color scale/legend consistency,
 
